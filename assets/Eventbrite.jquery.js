@@ -1,6 +1,6 @@
 var token = '75DOKIZPPPE2S4YVZEMV';
 
-// https://www.eventbriteapi.com/v3/events/search/?q=food&token=75DOKIZPPPE2S4YVZEMV
+https://www.eventbriteapi.com/v3/events/search/?q=food&token=75DOKIZPPPE2S4YVZEMV
 
 var eventsDictionary = {};
 
