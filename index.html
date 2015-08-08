@@ -1,0 +1,88 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <!-- Required to properly zoom the viewport on mobile. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Grub Crawl</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Application CSS and fonts -->
+  <link rel="stylesheet" href="assets/grubcrawl.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+
+</head>
+
+<body>
+  <!-- Navigational header -->
+  <div id="nav-header">
+    <span></span>
+    <span><img id="logo" src="assets/gc-logo-white.png"></span>
+  </div>
+
+
+
+  <!-- Hero poster image -->
+  <div id="hero">
+    <div class="row">
+      <span id="hero-text">Find your next food event</span>
+    </div>  
+    <div class="row">
+      <span><input id="searchbox" type="search" placeholder="Enter a location..."></span>
+      <span><input id="submitbutton" type="submit" value="Search"></span>
+    </div>
+  </div>
+
+
+  
+  <!-- Container that we'll append a bunch of cards into. -->
+  <div id="cards-intro">Crawl through these food events</div>
+  <div id="cards-container"></div>
+  <div id="mask"></div>
+  <div id="lightbox-container">  </div>
+      
+      
+
+  <!-- Footer  -->
+  <div id="footer" class="spacer container">
+    <div class="row">
+      <div class="col-xs-4">
+        <a href="contact.html">Trademark Licensing</a>
+      </div>
+      <div class="col-xs-4">
+        <a href="contact.html">Event Production</a>
+      </div>
+      <div class="col-xs-4">  
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+      <div class="col-xs-12">
+        <br /> Grub Crawl &copy; 2015. All Rights Reserved.</a> 
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Event Template.  -->
+  <script id="my-template" type="x-tmpl-mustache">
+    <div id="{{ id }}" class="card" style="background-image: url({{logo.url}})"></div>
+  </script>  
+
+  <!-- Lightbox template. -->
+  <script id="lightbox-template" type="x-tmpl-mustache">
+    <div class="lightbox">
+      <div class="poster" style="background-image: url({{logo.url}})"></div>
+      <div class="name">{{name.text}}</div>
+      <div class="date">{{start.local}}</div>
+      <div class="description">{{description.text}}</div>
+      <div class="ticket"><a href="{{url}}" target="_blank">Buy Tickets</a></div>
+    </div>
+  </script>
+
+  <script src="http://code.jquery.com/jquery-1.6.1.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="assets/Eventbrite.jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+  </body>
+</html>
